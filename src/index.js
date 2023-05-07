@@ -54,8 +54,8 @@ async function pixabay(name, page) {
         const response = await axios.get(API_URL, options);
         
         notification(
-      response.data.hits.length, // довжина всіх знайдених зображень
-      response.data.total // отримання кількості
+      response.data.hits.length, 
+      response.data.total 
         );
         createMarkup(response.data)
     } catch (error) {
